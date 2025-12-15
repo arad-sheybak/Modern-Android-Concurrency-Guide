@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Muli_Threading"
 include(":app")
+include(":threading")
+include(":coroutines")
+include(":flow")
