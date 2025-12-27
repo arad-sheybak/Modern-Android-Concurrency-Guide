@@ -42,6 +42,10 @@ android {
 }
 
 dependencies {
+    implementation(project(":threading"))
+    implementation(project(":coroutines"))
+    implementation(project(":flow"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -50,12 +54,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.constraintlayout)
-// Navigation
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
-
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    // constraint layout
+    implementation(libs.androidx.compose.constraintlayout)
+    // Navigation
+    implementation(libs.androidx.navigation.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
