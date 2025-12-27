@@ -5,10 +5,11 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.aradsheybak.muli_threading.screens.CoroutineScreen
-import com.aradsheybak.muli_threading.screens.FlowScreen
+import com.aradsheybak.muli_threading.screens.coroutine.CoroutineScreen
+import com.aradsheybak.muli_threading.screens.flow.FlowScreen
 import com.aradsheybak.muli_threading.screens.MainScreen
-import com.aradsheybak.muli_threading.screens.ThreadingScreen
+import com.aradsheybak.muli_threading.screens.threading.ThreadingScreen
+import com.aradsheybak.threading.basics.SimpleThreadExample
 
 @Composable
 fun AppNavHost(navController: NavHostController, modifier: Modifier = Modifier) {
@@ -30,6 +31,10 @@ fun AppNavHost(navController: NavHostController, modifier: Modifier = Modifier) 
 
         composable (Screen.flow.route){
             FlowScreen(navController = navController)
+        }
+
+        composable (Screen.simpleThreadExample.route){
+            SimpleThreadExample()
         }
     }
 }

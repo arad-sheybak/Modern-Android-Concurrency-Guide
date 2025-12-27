@@ -6,4 +6,6 @@ sealed class Screen(val route: String) {
     object coroutine : Screen("coroutine")
     object flow : Screen("flow")
 
+    object simpleThreadExample:Screen("simpleThreadExample")
+
 }

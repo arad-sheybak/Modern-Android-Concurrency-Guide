@@ -1,4 +1,4 @@
-package com.aradsheybak.threading.basics
+package com.aradsheybak.muli_threading.screens.threading
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -13,15 +13,17 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color.Companion.Black
-import androidx.compose.ui.graphics.Color.Companion.Yellow
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.aradsheybak.muli_threading.R
+import com.aradsheybak.muli_threading.Screen
+import com.aradsheybak.muli_threading.ui.theme.Pink40
 
 @Composable
-fun SimpleThreadExample(){
+fun ThreadingScreen(navController: NavController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -29,21 +31,21 @@ fun SimpleThreadExample(){
     ) {
         Box(
             modifier = Modifier
+                .clickable {
+                    navController.navigate(Screen.simpleThreadExample.route)
+                }
                 .fillMaxWidth(0.8f)
                 .height(120.dp)
-                .background(color = Yellow, shape = RoundedCornerShape(12.dp)),
+                .background(color = Pink40, shape = RoundedCornerShape(12.dp)),
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "This is Simple Thread Example Screen",
-                color = Black,
+                text = "Simple Thread Example",
+                color = colorResource(R.color.white),
                 fontSize = 26.sp,
-                fontWeight = FontWeight.W600,
-                textAlign = TextAlign.Center
+                fontWeight = FontWeight.W600
             )
         }
 
     }
 }
-
-
