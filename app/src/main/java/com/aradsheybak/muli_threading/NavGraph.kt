@@ -9,7 +9,7 @@ import com.aradsheybak.muli_threading.screens.coroutine.CoroutineScreen
 import com.aradsheybak.muli_threading.screens.flow.FlowScreen
 import com.aradsheybak.muli_threading.screens.MainScreen
 import com.aradsheybak.muli_threading.screens.threading.ThreadingScreen
-import com.aradsheybak.threading.basics.SimpleThreadExample
+import com.aradsheybak.threading.basics.SimpleThreadExampleUi
 
 @Composable
 fun AppNavHost(navController: NavHostController, modifier: Modifier = Modifier) {
@@ -34,7 +34,7 @@ fun AppNavHost(navController: NavHostController, modifier: Modifier = Modifier) 
         }
 
         composable (Screen.simpleThreadExample.route){
-            SimpleThreadExample()
+            SimpleThreadExampleUi()
         }
     }
 }
