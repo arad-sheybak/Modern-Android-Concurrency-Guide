@@ -65,6 +65,23 @@ fun ThreadingScreen(navController: NavController) {
             )
         }
 
+        Box(
+            modifier = Modifier
+                .clickable {
+                    navController.navigate(Screen.executerExample.route)
+                }
+                .fillMaxWidth(0.8f)
+                .height(120.dp)
+                .background(color = Pink40, shape = RoundedCornerShape(12.dp)),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = "Executer Example",
+                color = colorResource(R.color.white),
+                fontSize = 26.sp,
+                fontWeight = FontWeight.W600
+            )
+        }
 
     }
 }

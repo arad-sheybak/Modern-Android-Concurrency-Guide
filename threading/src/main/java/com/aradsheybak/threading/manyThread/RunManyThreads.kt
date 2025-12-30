@@ -1,4 +1,4 @@
-package com.aradsheybak.threading.basics
+package com.aradsheybak.threading.manyThread
 
 fun runManyThreads(onLog: (String) -> Unit) {
 

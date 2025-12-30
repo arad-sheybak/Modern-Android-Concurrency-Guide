@@ -1,4 +1,4 @@
-package com.aradsheybak.threading.basics
+package com.aradsheybak.threading.simpleThread
 
 fun runSimpleThreadExample(onLog: (String) -> Unit) {
 

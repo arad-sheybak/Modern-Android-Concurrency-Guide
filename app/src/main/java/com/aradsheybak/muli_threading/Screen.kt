@@ -8,5 +8,6 @@ sealed class Screen(val route: String) {
 
     object simpleThreadExample:Screen("simpleThreadExample")
     object manyThreadExample: Screen("manyThreadExample")
+    object executerExample: Screen("executerExample")
 
 }

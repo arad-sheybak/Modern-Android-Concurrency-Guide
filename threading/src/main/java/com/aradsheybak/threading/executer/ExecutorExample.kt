@@ -1,4 +1,4 @@
-package com.aradsheybak.threading.basics
+package com.aradsheybak.threading.executer
 
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ManyThreadsExample() {
+fun ExecutorExample() {
 
     val logs = remember { mutableStateListOf<String>() }
 
@@ -24,12 +24,12 @@ fun ManyThreadsExample() {
     ) {
 
         Button(onClick = {
-            runManyThreads(onLog = { message ->
+            runExecutorExample { message ->
                 logs.add(message)
-                Log.d("ManyThreads", message)
-            })
+                Log.d("ExecutorExample", message)
+            }
         }) {
-            Text("Run 20 Threads")
+            Text("Run Executor Example")
         }
 
         Divider()
